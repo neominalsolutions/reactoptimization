@@ -6,7 +6,9 @@ function Layout() {
 		<div style={{ padding: '10px' }}>
 			<nav>
 				<Link to="/useState">useState</Link>{' '}
-				<Link to="/useEffect">useEffect</Link>
+				<Link to="/useEffect">useEffect</Link>{' '}
+				<Link to="/reactMemo">React Memo</Link>{' '}
+				<Link to="/useMemo">Use Memo</Link>
 			</nav>
 			<main>
 				<Outlet />

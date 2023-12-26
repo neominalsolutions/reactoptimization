@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Link, Outlet, useRoutes } from 'react-router-dom';
+import ReactMemoSample from './demo/reactMemo/ReactMemoSample';
+import UseMemoSample from './demo/useMemo/useMemoSample';
+
 // import Layout from './layout/Layout';
 
 const Layout = React.lazy(() => import('./layout/Layout'));
@@ -33,6 +36,14 @@ function App() {
 				{
 					path: 'useEffect',
 					Component: useEffectSample,
+				},
+				{
+					path: 'reactMemo',
+					Component: ReactMemoSample,
+				},
+				{
+					path: 'usememo',
+					Component: UseMemoSample,
 				},
 			],
 		},
