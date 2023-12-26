@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -10,8 +10,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<BrowserRouter>
-		{/* 1.yöntem */}
-		{/* <Routes>
+		{/* asenkron bir yükleme varsa bu durumda sesupense ile bu componentin doma yüklenişini yakalayıp hata durumuda fallback ile bir hata görüntüsü sağlayabiliriz. */}
+		<Suspense fallback={<>Error Content Loading</>}>
+			{/* 1.yöntem */}
+			{/* <Routes>
 			<Route
 				path="/"
 				element={
@@ -36,7 +38,8 @@ root.render(
 			</Route>
 		</Routes> */}
 
-		<App />
+			<App />
+		</Suspense>
 		{/* 2.yöntem routing işlemlerini app Component üzerinden useRoutes hook ile yönetmek */}
 	</BrowserRouter>
 );

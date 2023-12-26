@@ -2,11 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Link, Outlet, useRoutes } from 'react-router-dom';
-import Layout from './layout/Layout';
-import useStateSample from './demo/useState/useStateSample';
-import useEffectSample from './demo/useEffect/useEffectSample';
+// import Layout from './layout/Layout';
+
+const Layout = React.lazy(() => import('./layout/Layout'));
+
+// import useStateSample from './demo/useState/useStateSample';
+// import useEffectSample from './demo/useEffect/useEffectSample';
+// Suspense ve lazy sayesinde component / ile çağırılırken doma yükenir. böylelikle ilk yüklemedeki dosya boyutunu azaltmış oluruz. uygulama daha hızlı açılır. lazy loading tembel yükleme tekniği ismini veriyoruz.
+// Aynı zamanda bu tekniğe code-splitting ismini veriyoruz.
+
+const useEffectSample = React.lazy(
+	() => import('./demo/useEffect/useEffectSample')
+);
+const useStateSample = React.lazy(
+	() => import('./demo/useState/useStateSample')
+);
 
 function App() {
+	// uygulamadaki bütün jsler bundle.js dosyası altında yüklenmiş oluyor. default davranış bu.
+
 	return useRoutes([
 		{
 			path: '/',
