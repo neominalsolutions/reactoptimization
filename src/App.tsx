@@ -60,6 +60,10 @@ function App() {
 					path: 'customHook',
 					Component: customHookSample,
 				},
+				{
+					path: 'useref',
+					Component: UseRefSample,
+				},
 			],
 		},
 	]);
