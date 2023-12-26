@@ -8,7 +8,10 @@ function Layout() {
 				<Link to="/useState">useState</Link>{' '}
 				<Link to="/useEffect">useEffect</Link>{' '}
 				<Link to="/reactMemo">React Memo</Link>{' '}
-				<Link to="/useMemo">Use Memo</Link>
+				<Link to="/useMemo">Use Memo</Link>{' '}
+				<Link to="/useCallback">Use Callback</Link>{' '}
+				<Link to="/useRef">Use Ref</Link> {'  '}
+				<Link to="/customHook">Custom Hook</Link>
 			</nav>
 			<main>
 				<Outlet />

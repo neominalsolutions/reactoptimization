@@ -4,6 +4,9 @@ import './App.css';
 import { Link, Outlet, useRoutes } from 'react-router-dom';
 import ReactMemoSample from './demo/reactMemo/ReactMemoSample';
 import UseMemoSample from './demo/useMemo/useMemoSample';
+import UseCallbackSample from './demo/useCallback/UseCallbackSample';
+import UseRefSample from './demo/useRef/UseRefSample';
+import customHookSample from './demo/customHook/customHookSample';
 
 // import Layout from './layout/Layout';
 
@@ -44,6 +47,18 @@ function App() {
 				{
 					path: 'usememo',
 					Component: UseMemoSample,
+				},
+				{
+					path: 'useCallback',
+					Component: UseCallbackSample,
+				},
+				{
+					path: 'useRef',
+					Component: UseRefSample,
+				},
+				{
+					path: 'customHook',
+					Component: customHookSample,
 				},
 			],
 		},
