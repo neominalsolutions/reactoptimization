@@ -8,6 +8,7 @@ import UseCallbackSample from './demo/useCallback/UseCallbackSample';
 import UseRefSample from './demo/useRef/UseRefSample';
 import customHookSample from './demo/customHook/customHookSample';
 import UseReducerSample from './demo/useReducer/UseReducerSample';
+import DebouncingSample from './demo/deboucing/DebouncingSample';
 
 // import Layout from './layout/Layout';
 
@@ -68,6 +69,10 @@ function App() {
 				{
 					path: 'useReducer',
 					Component: UseReducerSample,
+				},
+				{
+					path: 'debouncing',
+					Component: DebouncingSample,
 				},
 			],
 		},

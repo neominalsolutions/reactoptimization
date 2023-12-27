@@ -13,6 +13,7 @@ function Layout() {
 				<Link to="/customHook">Custom Hook</Link>{' '}
 				<Link to="/useRef">Use Ref</Link> {'  '}
 				<Link to="/useReducer">Use Redecur</Link> {'  '}
+				<Link to="/debouncing">Debouncing Sample</Link> {'  '}
 			</nav>
 			<main>
 				<Outlet />
