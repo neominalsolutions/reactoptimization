@@ -12,6 +12,7 @@ function Layout() {
 				<Link to="/useCallback">Use Callback</Link>{' '}
 				<Link to="/customHook">Custom Hook</Link>{' '}
 				<Link to="/useRef">Use Ref</Link> {'  '}
+				<Link to="/useReducer">Use Redecur</Link> {'  '}
 			</nav>
 			<main>
 				<Outlet />

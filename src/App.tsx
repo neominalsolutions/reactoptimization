@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Link, Outlet, useRoutes } from 'react-router-dom';
@@ -7,6 +7,7 @@ import UseMemoSample from './demo/useMemo/useMemoSample';
 import UseCallbackSample from './demo/useCallback/UseCallbackSample';
 import UseRefSample from './demo/useRef/UseRefSample';
 import customHookSample from './demo/customHook/customHookSample';
+import UseReducerSample from './demo/useReducer/UseReducerSample';
 
 // import Layout from './layout/Layout';
 
@@ -63,6 +64,10 @@ function App() {
 				{
 					path: 'useref',
 					Component: UseRefSample,
+				},
+				{
+					path: 'useReducer',
+					Component: UseReducerSample,
 				},
 			],
 		},
