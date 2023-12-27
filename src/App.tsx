@@ -9,6 +9,7 @@ import UseRefSample from './demo/useRef/UseRefSample';
 import customHookSample from './demo/customHook/customHookSample';
 import UseReducerSample from './demo/useReducer/UseReducerSample';
 import DebouncingSample from './demo/deboucing/DebouncingSample';
+import LoginFormSample from './demo/useFormsHook/LoginFormSample';
 
 // import Layout from './layout/Layout';
 
@@ -73,6 +74,10 @@ function App() {
 				{
 					path: 'debouncing',
 					Component: DebouncingSample,
+				},
+				{
+					path: 'login',
+					Component: LoginFormSample,
 				},
 			],
 		},

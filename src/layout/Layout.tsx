@@ -14,6 +14,7 @@ function Layout() {
 				<Link to="/useRef">Use Ref</Link> {'  '}
 				<Link to="/useReducer">Use Redecur</Link> {'  '}
 				<Link to="/debouncing">Debouncing Sample</Link> {'  '}
+				<Link to="/login">Login Sample</Link> {'  '}
 			</nav>
 			<main>
 				<Outlet />

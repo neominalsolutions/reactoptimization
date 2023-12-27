@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { SetupInterceptors } from '../axiosInteceptors/axiosSetup';
 
 interface NetworkState {
 	isError: boolean;
@@ -10,6 +12,12 @@ interface NetworkState {
 // bu custom Hook asenkton programa modeli ile çalıştığı için datanın component içinde undefined olarak gelmemesini garanti etmez.
 // 2000ms default timeout
 function UseNetwork(url: string, timeOut: number = 2000) {
+	const client = SetupInterceptors(
+		axios.create({
+			baseURL: 'https://jsonplaceholder.typicode.com/',
+		})
+	);
+
 	const [state, setState] = useState<NetworkState>({
 		isError: false,
 		loading: true,
@@ -24,8 +32,8 @@ function UseNetwork(url: string, timeOut: number = 2000) {
 		// useEffect içerisinde bu state tanımı halletmeliyiz
 
 		setTimeout(() => {
-			fetch(url)
-				.then((response) => response.json())
+			client
+				.get(url)
 				.then((_data) => {
 					state.loading = false;
 					state.data = _data as any;

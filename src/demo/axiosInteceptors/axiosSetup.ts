@@ -8,7 +8,15 @@ import {
 const onRequest = (config: InternalAxiosRequestConfig) => {
 	// her request de buraya düşecek
 	console.log('onRequest', config);
-	// config.headers['Authorization']
+
+	const token = localStorage.getItem('token');
+
+	// token varsa her bir request token ekle
+	if (token) {
+		config.headers['Authorization'] = `Bearer ${token}`;
+		return config;
+	}
+
 	return config;
 };
 
@@ -19,6 +27,16 @@ const onRequestError = (error: AxiosError) => {
 
 const onResponse = (response: AxiosResponse) => {
 	console.log('onResponse', response);
+	// token set
+
+	if (response.config.url === 'login') {
+		if (response.status === 200) {
+			const token = (response.data as any).token;
+			localStorage.setItem('token', token);
+			window.location.href = '/'; // reload ederek yönlendirdik.
+		}
+	}
+
 	return response;
 };
 
