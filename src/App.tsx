@@ -12,6 +12,7 @@ import DebouncingSample from './demo/deboucing/DebouncingSample';
 import LoginFormSample from './demo/useFormsHook/LoginFormSample';
 import UseContextSample from './demo/useContext/UseContextSample';
 import CartSummary from './demo/useContext/CartSummary';
+import LoginFormSampleWithYup from './demo/useFormsHook/LoginFormSampleWithYup';
 
 // import Layout from './layout/Layout';
 
@@ -79,7 +80,7 @@ function App() {
 				},
 				{
 					path: 'login',
-					Component: LoginFormSample,
+					Component: LoginFormSampleWithYup,
 				},
 				{
 					path: 'useContext',

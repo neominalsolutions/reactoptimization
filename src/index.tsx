@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import CartProvider from './demo/useContext/CartProvider';
+import LoginFormSample from './demo/useFormsHook/LoginFormSample';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -42,6 +43,9 @@ root.render(
 		</Routes> */}
 
 				<App />
+				{/* <LoginFormSample
+					formData={{ username: 'cansu', password: 'sadsad' }}
+				></LoginFormSample> */}
 			</Suspense>
 			{/* 2.yöntem routing işlemlerini app Component üzerinden useRoutes hook ile yönetmek */}
 		</CartProvider>
