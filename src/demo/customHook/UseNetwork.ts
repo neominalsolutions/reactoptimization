@@ -11,10 +11,14 @@ interface NetworkState {
 
 // bu custom Hook asenkton programa modeli ile çalıştığı için datanın component içinde undefined olarak gelmemesini garanti etmez.
 // 2000ms default timeout
-function UseNetwork(url: string, timeOut: number = 2000) {
+function UseNetwork(
+	url: string,
+	timeOut: number = 2000,
+	baseUrl: string = 'https://jsonplaceholder.typicode.com/'
+) {
 	const client = SetupInterceptors(
 		axios.create({
-			baseURL: 'https://jsonplaceholder.typicode.com/',
+			baseURL: baseUrl,
 		})
 	);
 
@@ -35,6 +39,7 @@ function UseNetwork(url: string, timeOut: number = 2000) {
 			client
 				.get(url)
 				.then((_data) => {
+					console.log('data', _data);
 					state.loading = false;
 					state.data = _data as any;
 					setState({ ...state }); // tek state tetikledi.

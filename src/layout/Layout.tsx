@@ -15,6 +15,7 @@ function Layout() {
 				<Link to="/useReducer">Use Redecur</Link> {'  '}
 				<Link to="/debouncing">Debouncing Sample</Link> {'  '}
 				<Link to="/login">Login Sample</Link> {'  '}
+				<Link to="/useContext">Use Context Sample</Link> {'  '}
 			</nav>
 			<main>
 				<Outlet />

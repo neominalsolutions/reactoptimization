@@ -10,6 +10,8 @@ import customHookSample from './demo/customHook/customHookSample';
 import UseReducerSample from './demo/useReducer/UseReducerSample';
 import DebouncingSample from './demo/deboucing/DebouncingSample';
 import LoginFormSample from './demo/useFormsHook/LoginFormSample';
+import UseContextSample from './demo/useContext/UseContextSample';
+import CartSummary from './demo/useContext/CartSummary';
 
 // import Layout from './layout/Layout';
 
@@ -78,6 +80,14 @@ function App() {
 				{
 					path: 'login',
 					Component: LoginFormSample,
+				},
+				{
+					path: 'useContext',
+					Component: UseContextSample,
+				},
+				{
+					path: 'cartSummary',
+					Component: CartSummary,
 				},
 			],
 		},

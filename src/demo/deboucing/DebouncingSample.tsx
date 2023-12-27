@@ -6,6 +6,7 @@ import { SetupInterceptors } from '../axiosInteceptors/axiosSetup';
 export interface ProductDto {
 	ProductID: number;
 	ProductName: string;
+	UnitPrice: number;
 }
 
 const axiosInstance = axios.create({
